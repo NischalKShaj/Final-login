@@ -12,15 +12,29 @@
     <div class="body1">
     
             <h1>Welcome,</h1>
-            <h3><%= username1 %>!</h3>
+            <h3><%= username %>!</h3>
                   
-        <form action="/logout" >
-            <button type="submit">Log-out</button>
-        </form>
+    
+            <button style="cursor:pointer" id="logoutButton">Log out</button>
+
     </div>
   
 
-
+    <script>
+        const logoutButton = document.querySelector('#logoutButton');
+    
+    logoutButton.addEventListener('click', () => {
+      fetch('/auth/logout', {
+        method: 'POST',
+      }).then((res) => {
+        if(res.status === 200) {
+            console.log(res.status);
+            window.location.href = "http://localhost:3000/";
+        }
+    })
+    });
+    
+      </script>
     
 </body>
 </html>
