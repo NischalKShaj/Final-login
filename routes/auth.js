@@ -12,6 +12,7 @@ router.post("/login", (req, res) => {
 
     if(username === credential.username && password === credential.password) {
         req.session.user = username;
+        console.log("login successful");
         res.redirect("/user")
     } else {
         res.render("home", {err:true})
