@@ -45,5 +45,5 @@ app.use("/auth", router)
 
 
 app.listen(3000,()=>{
-    console.log("server started...");
+    console.log("server started at 3000.....");
 })

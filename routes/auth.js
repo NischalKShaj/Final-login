@@ -6,6 +6,7 @@ const credential = {
     password: "red"
 }
 
+
 router.post("/login", (req, res) => {
     const {username, password} = req.body;
 
@@ -23,7 +24,7 @@ router.post("/logout", (req, res) => {
           console.log(err);
           res.send("Error");
         } else {
-          console.log("test");
+          console.log("logout successful");
           res.status(200).send('Okay');
         }
       });
