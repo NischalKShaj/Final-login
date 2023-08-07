@@ -44,6 +44,6 @@ app.get("/user", (req, res) => {
 app.use("/auth", router)
 
 
-app.listen(4000,()=>{
+app.listen(3000,()=>{
     console.log("server started at 4000.....");
 })
